@@ -1,0 +1,6 @@
+# Install requirements using pip:
+# $ pip install -r requirements.txt
+PyMySQL==0.5
+SQLAlchemy==0.8.0b2
+Bottle==0.11.6
+

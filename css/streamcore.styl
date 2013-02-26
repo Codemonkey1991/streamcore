@@ -1,0 +1,24 @@
+/* 
+
+ * This is the main style sheet for Streamcore.tv. It should import all other
+ * style sheets.
+ */
+
+// Declarative sheets.
+@import "nib";
+@import "mixins";
+@import "const";
+
+global-reset();
+reset-html5();
+
+// General sheets.
+@import "fonts";
+@import "elements";
+@import "scrollbar";
+
+// Controller styles.
+@import "header";
+@import "game_list";
+@import "stream_list";
+

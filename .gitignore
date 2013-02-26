@@ -1,0 +1,13 @@
+# The vim config file.
+_vimrc
+
+# Python stuff.
+*.pyc
+*.pyo
+
+# Vim stuff.
+*.swp
+
+# Built stuff.
+/static/streamcore.css
+

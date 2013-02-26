@@ -1,0 +1,23 @@
+<header class="{{size}}">
+    <div class="highlight"></div>
+
+    {{! Big and small header versions have different logos }}
+    {{#big}}<div class="logo"></div>{{/big}}
+    {{^big}}<a href="#/" class="small_logo">STREAMCORE</a>{{/big}}
+
+    <nav>
+        <div class="inner">
+            <a href="#/games">Games</a>
+            <a href="#/pages/help">Help</a>
+            <a href="#/pages/about">About</a>
+            <a href="https://www.facebook.com/Streamcoretv" target="new">
+                Facebook
+            </a>
+            {{#DEBUG}}
+            <a href="#/debug" class="red">Debug page</a>
+            <a href="#/unittests" class="red">Unit tests</a>
+            {{/DEBUG}}
+        </div>
+    </nav>
+</header>
+

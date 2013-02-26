@@ -1,0 +1,33 @@
+<div class="header">
+    <div class="logo" style="background-image: url({{game.logo}})"></div>
+    <div class="name">{{game.name}}</div>
+</div>
+
+<div class="status">
+    <div class="highlight"></div>
+
+    {{#updating_streams}}
+    <div class="loading"></div>
+    <div class="message">Updating streams...</div>
+    {{/updating_streams}}
+
+    {{#streams_are_fresh}}
+    <div class="message">Streams are fresh.</div>
+    {{/streams_are_fresh}}
+</div>
+
+<div class="streams">
+    {{^streams}}
+    <div class="loading"></div>
+    {{/streams}}
+
+    {{#streams}}
+    <div class="stream{{#featured}} featured{{/featured}}">
+        <div class="screencap"
+             style="background-image: url('{{screencap_small}}')"></div>
+        <div class="status">{{text_status}}</div>
+        <div class="name">{{name}}</div>
+    </div>
+    {{/streams}}
+</div>
+

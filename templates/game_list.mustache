@@ -1,0 +1,31 @@
+{{#no_games_cache}}
+<div class="loading_games">
+    <div class="loading_icon"></div>
+    <div class="big">
+        The game list is being downloaded
+    </div>
+    <div class="small">
+        Please wait...
+    </div>
+</div>
+{{/no_games_cache}}
+
+{{^no_games_cache}}
+<div class="games">
+    {{#games}}
+    <a class="game" data-name="{{name}}" href="#/streams/{{name}}">
+        <div class="logo_wrapper">
+            <div class="logo" style="background-image: url({{box_medium}});"></div>
+        </div>
+        <div class="info_wrapper">
+            <div class="name">{{name}}</div>
+            <div class="numbers">
+                {{viewers}} viewers<br />
+                {{channels}} channels
+            </div>
+        </div>
+    </a>
+    {{/games}}
+</div>
+{{/no_games_cache}}
+

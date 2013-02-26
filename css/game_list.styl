@@ -1,0 +1,110 @@
+div.game_list
+    z-index: 1;
+
+    position: absolute;
+
+    //overflow-y: scroll;
+    //overflow-x: hidden;
+    user-select: none;
+
+    > div.loading_games
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        width: 350px;
+        height: 100px;
+        margin-left: -150px;
+        margin-top: -50px;
+
+        text-align: center;
+
+        > div.loading_icon
+            position: absolute;
+            top: 43px;
+            left: 100px;
+            width: 24px;
+            height: 24px;
+            background-image: url('/static/images/game_list_loading.gif');
+            float: left;
+
+        > div.big
+            medium_header();
+
+        > div.small
+            margin-top: 20px;
+
+    > div.games
+        $game_item_margin = 20px;
+
+        // transition: opacity 500ms ease-out;
+        overflow-x: hidden;
+        overflow-y: visible;
+
+        a.game
+            $game_item_width = 136px;
+            $logo_width = 136px;
+            $logo_height = 190px;
+            $text_font_size = 11px;
+
+            display: block;
+            float: left;
+            position: relative;
+            height: $logo_height + 85px;
+            width: $game_item_width;
+            margin-top: $game_item_margin;
+            margin-left: $game_item_margin;
+
+            // background: linear-gradient(top, #333333 0%, #282828 100%);
+            background-image: url('/static/images/noise_50x50.png');
+            background-repeat: repeat;
+            background-color: #333333;
+            border-radius: 1px;
+            // box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3),
+            //             inset 5px 5px 5px rgba(0, 0, 0, 0.3);
+
+            &:hover
+                cursor: pointer;
+                outline: 1px solid rgba(255, 255, 255, 0.3);
+                box-shadow: 0px 0px 10px rgba(200, 220, 255, 1);
+
+            > div.logo_wrapper
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                height: $logo_height;
+
+                // box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+                // background: linear-gradient(top, #222222 0%, #181818 100%);
+
+                > div.logo
+                    width: $logo_width;
+                    height: $logo_height;
+                    margin: 0px auto;
+                    background-repeat: no-repeat; 
+                    background-position: center center;
+                    // border: 1px solid rgba(255, 255, 255, 0.2);
+                    box-shadow: inset 0px -5px 10px rgba(0, 0, 0, 0.3);
+
+            > div.info_wrapper
+                position: absolute;
+                top: $logo_height + 10px;
+                left: 5px;
+                right: 5px;
+
+                text-align: center;
+
+                > div.name
+                    margin-bottom: 5px;
+                    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+                    font-weight: bold;
+                    overflow: hidden;
+                    user-select: all;
+                    text-align: center;
+                    max-height: 35px;
+
+                > div.numbers
+                    font-size: $text_font_size;
+                    user-select: all;
+                    opacity: 0.8;
+
